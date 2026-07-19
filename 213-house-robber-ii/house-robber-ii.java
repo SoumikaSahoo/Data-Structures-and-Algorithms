@@ -8,7 +8,7 @@ class Solution {
         dp[0]=nums[0];
         dp[1]=Math.max(nums[0],nums[1]);
 
-        for(int i=2;i<n-1;i++){
+        for(int i=2;i<=n-2;i++){
             dp[2]=Math.max(nums[i]+dp[0],dp[1]);
             dp[0]=dp[1];
             dp[1]=dp[2];
@@ -18,7 +18,7 @@ class Solution {
        dp[0]=nums[1];
        dp[1]=Math.max(nums[1],nums[2]);
 
-          for(int i=3;i<n;i++){
+          for(int i=3;i<=n-1;i++){
             dp[2]=Math.max(nums[i]+dp[0],dp[1]);
             dp[0]=dp[1];
             dp[1]=dp[2];
